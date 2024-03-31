@@ -14,10 +14,14 @@ button.addEventListener("click", function(){
     }
 
     let containerSize = 400
-    let margin = 10
+    
+    // Calculate the number of squares per row
     let squaresPerRow = Math.floor(Math.sqrt(numberOfSquares))
-    let squareSize = (containerSize - (squaresPerRow + 1) * margin) / squaresPerRow
 
+    // Calculate the square size based on the number of squares per row
+    let squareSize = containerSize / squaresPerRow
+
+  
 
     for (let i = 0; i < numberOfSquares; i++ ){
         let square = document.createElement("div")
