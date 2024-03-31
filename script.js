@@ -19,9 +19,17 @@ for (let i = 0; i < numberOfSquares; i++ ){
 
     
     squareContainer.appendChild(square)
+
 }
 
-let hover = document.querySelector("square-div")
-hover.addEventListener("mouseenter", (event) => {
-    event.target.style.color = "purple"
+let hoverSquares = document.querySelectorAll(".square-div")
+
+hoverSquares.forEach(square => {
+    square.addEventListener("mouseenter", (event) => {
+        event.target.style.backgroundColor = "violet"
+    })
+    square.addEventListener("mouseleave", (event) => {
+        event.target.style.backgroundColor = "darkblue"
+    })
 })
+
