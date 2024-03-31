@@ -3,9 +3,10 @@ let button = document.querySelector(".btn")
 
 
 button.addEventListener("click", function(){
-    let numberOfSquares = parseInt(prompt("Please enter a number (<100)"))
-
     let squareContainer = document.querySelector(".container")
+    squareContainer.replaceChildren()
+    
+    let numberOfSquares = parseInt(prompt("Please enter a number (<100)"))
 
     let containerSize = 400
     let margin = 10
