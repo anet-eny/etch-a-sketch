@@ -1,6 +1,29 @@
 body {
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+}
+
+.btn {
+    background-color: #3882f6;
+    border: 3px solid black;
+    color: black;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 20px;
+    border-radius: 10px; 
+}
+
+.btn:hover {
+    background-color: #1463e3;
+}
+
+.btn:active {
+    background-color: #1463e3;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
 }
 
 
@@ -13,7 +36,7 @@ body {
 }
 
 .square-div {
-    background-color: darkblue;
+    background-color: grey;
     margin: 5px;
     display: flex;
     justify-content: center;

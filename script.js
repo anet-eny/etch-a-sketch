@@ -26,10 +26,10 @@ let hoverSquares = document.querySelectorAll(".square-div")
 
 hoverSquares.forEach(square => {
     square.addEventListener("mouseenter", (event) => {
-        event.target.style.backgroundColor = "violet"
+        event.target.style.backgroundColor = "#3882f6"
     })
     square.addEventListener("mouseleave", (event) => {
-        event.target.style.backgroundColor = "darkblue"
+        event.target.style.backgroundColor = "grey"
     })
 })
 
