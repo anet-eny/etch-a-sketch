@@ -12,7 +12,6 @@ button.addEventListener("click", function(){
         alert("Please enter a number between 1 and 196")
         return
     }
-
     let containerSize = 400
     
     // Calculate the number of squares per row
@@ -21,7 +20,6 @@ button.addEventListener("click", function(){
     // Calculate the square size based on the number of squares per row
     let squareSize = containerSize / squaresPerRow
 
-  
 
     for (let i = 0; i < numberOfSquares; i++ ){
         let square = document.createElement("div")
@@ -38,11 +36,26 @@ button.addEventListener("click", function(){
     let hoverSquares = document.querySelectorAll(".square-div")
 
     hoverSquares.forEach(square => {
+        let isClicked = false
+
         square.addEventListener("mouseenter", (event) => {
-            event.target.style.backgroundColor = "#3882f6"
+            if(!isClicked){
+                event.target.style.backgroundColor = "#3882f6"
+            }
         })
         square.addEventListener("mouseleave", (event) => {
-            event.target.style.backgroundColor = "grey"
+            if(!isClicked){
+                event.target.style.backgroundColor = "grey"
+            }
+        })
+        square.addEventListener("click", (event) => {
+            isClicked = !isClicked 
+            if(isClicked){
+                event.target.style.backgroundColor = "white"
+            } else {
+                event.target.style.backgroundColor = "grey"
+            }
+            
         })
     })
 })
