@@ -6,7 +6,12 @@ button.addEventListener("click", function(){
     let squareContainer = document.querySelector(".container")
     squareContainer.replaceChildren()
     
-    let numberOfSquares = parseInt(prompt("Please enter a number (<100)"))
+    let numberOfSquares = parseInt(prompt("Please enter a number (<196)"))
+
+    if(numberOfSquares < 1 || numberOfSquares > 196) {
+        alert("Please enter a number between 1 and 196")
+        return
+    }
 
     let containerSize = 400
     let margin = 10
