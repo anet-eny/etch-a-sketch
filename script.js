@@ -32,10 +32,25 @@ button.addEventListener("click", function(){
         squareContainer.appendChild(square)
 
     }
+    let selectedColor = null
+    let btnViolet = document.querySelector(".violet")
+    btnViolet.addEventListener("click", function() {
+        selectedColor = "violet"
+    })
 
-    let hoverSquares = document.querySelectorAll(".square-div")
+    let btnWhite = document.querySelector(".white")
+    btnWhite.addEventListener("click", function() {
+        selectedColor = "white"
+    })
 
-    hoverSquares.forEach(square => {
+    let btnDarkblue = document.querySelector(".darkblue")
+    btnDarkblue.addEventListener("click", function(){
+        selectedColor = "darkblue"
+    })
+
+    let squares = document.querySelectorAll(".square-div")
+
+    squares.forEach(square => {
         let isClicked = false
 
         square.addEventListener("mouseenter", (event) => {
@@ -50,8 +65,12 @@ button.addEventListener("click", function(){
         })
         square.addEventListener("click", (event) => {
             isClicked = !isClicked 
-            if(isClicked){
+            if(selectedColor === "violet") {
+                event.target.style.backgroundColor = "violet"
+            } else if (selectedColor === "white") {
                 event.target.style.backgroundColor = "white"
+            } else if (selectedColor === "darkblue") {
+                event.target.style.backgroundColor = "darkblue"
             } else {
                 event.target.style.backgroundColor = "grey"
             }
