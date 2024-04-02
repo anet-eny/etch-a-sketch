@@ -32,20 +32,12 @@ button.addEventListener("click", function(){
         squareContainer.appendChild(square)
 
     }
+    
     let selectedColor = null
-    let btnViolet = document.querySelector(".violet")
-    btnViolet.addEventListener("click", function() {
-        selectedColor = "violet"
-    })
-
-    let btnWhite = document.querySelector(".white")
-    btnWhite.addEventListener("click", function() {
-        selectedColor = "white"
-    })
-
-    let btnDarkcyan = document.querySelector(".darkcyan")
-    btnDarkcyan.addEventListener("click", function(){
-        selectedColor = "darkcyan"
+    document.querySelectorAll(".color-btn").forEach(button => {
+        button.addEventListener("click", function() {
+            selectedColor = button.dataset.color
+        })
     })
 
     let squares = document.querySelectorAll(".square-div")
