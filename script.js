@@ -43,9 +43,9 @@ button.addEventListener("click", function(){
         selectedColor = "white"
     })
 
-    let btnDarkblue = document.querySelector(".darkblue")
-    btnDarkblue.addEventListener("click", function(){
-        selectedColor = "darkblue"
+    let btnDarkcyan = document.querySelector(".darkcyan")
+    btnDarkcyan.addEventListener("click", function(){
+        selectedColor = "darkcyan"
     })
 
     let squares = document.querySelectorAll(".square-div")
@@ -69,8 +69,8 @@ button.addEventListener("click", function(){
                 event.target.style.backgroundColor = "violet"
             } else if (selectedColor === "white") {
                 event.target.style.backgroundColor = "white"
-            } else if (selectedColor === "darkblue") {
-                event.target.style.backgroundColor = "darkblue"
+            } else if (selectedColor === "darkcyan") {
+                event.target.style.backgroundColor = "darkcyan"
             } else {
                 event.target.style.backgroundColor = "grey"
             }

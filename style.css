@@ -27,6 +27,28 @@ body {
     transform: translateY(4px);
 }
 
+.color-buttons {
+    display: flex;
+}
+
+.color-btn {
+    border: 3px solid black;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 30px;
+    margin: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.violet {
+    background-color: violet;
+}
+
+.darkcyan {
+    background-color: darkcyan;
+}
 
 .container {
     display: flex;
