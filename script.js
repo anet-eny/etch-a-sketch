@@ -1,7 +1,5 @@
 let button = document.querySelector(".btn")
 
-
-
 button.addEventListener("click", function(){
     let squareContainer = document.querySelector(".container")
     squareContainer.replaceChildren()
@@ -30,7 +28,6 @@ button.addEventListener("click", function(){
 
     
         squareContainer.appendChild(square)
-
     }
     
     let selectedColor = null
@@ -47,8 +44,10 @@ button.addEventListener("click", function(){
 
         square.addEventListener("mouseenter", (event) => {
             if(!isClicked){
-                event.target.style.backgroundColor = "#3882f6"
-            }
+                if(event.target.style.backgroundColor !== selectedColor) {
+                    event.target.style.backgroundColor = selectedColor || "#3882f6" 
+                } 
+            } 
         })
         square.addEventListener("mouseleave", (event) => {
             if(!isClicked){
@@ -56,17 +55,12 @@ button.addEventListener("click", function(){
             }
         })
         square.addEventListener("click", (event) => {
-            isClicked = !isClicked 
-            if(selectedColor === "violet") {
-                event.target.style.backgroundColor = "violet"
-            } else if (selectedColor === "white") {
-                event.target.style.backgroundColor = "white"
-            } else if (selectedColor === "darkcyan") {
-                event.target.style.backgroundColor = "darkcyan"
+            isClicked = !isClicked
+            if (selectedColor) {
+                event.target.style.backgroundColor = selectedColor
             } else {
                 event.target.style.backgroundColor = "grey"
             }
-            
         })
     })
 })
