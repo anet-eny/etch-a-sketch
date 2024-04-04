@@ -54,15 +54,15 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 400px;
-    height: 400px;
+    /* width: 400px;
+    height: 400px; */
 }
 
-.square-div {
+/* .square-div {
     background-color: grey;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
     
-}
+} */
