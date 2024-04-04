@@ -42,14 +42,6 @@ body {
     cursor: pointer;
 }
 
-.violet {
-    background-color: violet;
-}
-
-.darkcyan {
-    background-color: darkcyan;
-}
-
 .container {
     display: flex;
     justify-content: center;
