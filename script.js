@@ -18,3 +18,9 @@ function createGrid() {
 }
 
 createGrid()
+
+document.querySelectorAll(".square-div").forEach(squareDiv => {
+    squareDiv.addEventListener("mouseenter", (event) => {
+        event.target.style.backgroundColor = "black"
+    })
+})
