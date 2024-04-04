@@ -46,17 +46,13 @@ body {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    box-sizing: border-box;
     border: 2px solid black;
-    /* width: 400px;
-    height: 400px; */
 }
 
-/* .square-div {
+.square-div {
     background-color: grey;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
-    
-} */
+    flex-wrap: wrap; 
+    box-sizing: border-box;
+    border: 1px solid white;
+}
