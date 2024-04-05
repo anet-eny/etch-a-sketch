@@ -26,7 +26,6 @@ function randomInteger(max) {
     return Math.floor(Math.random() * (max + 1))
 }
 
-
 function randomRgbColor() {
     let r = randomInteger(255)
     let g = randomInteger(255)
@@ -34,8 +33,6 @@ function randomRgbColor() {
     let randomColor = `rgb(${r}, ${g}, ${b})`
     return randomColor
 }
-
-createGrid()
 
 document.querySelector(".btn").addEventListener("click", function(){
     squaresPerRow = parseInt(prompt("Please enter a number between 1 and 100"))
@@ -57,3 +54,5 @@ function resetCanvas() {
 document.querySelector(".reset-btn").addEventListener("click", function(){
     resetCanvas()
 })
+
+createGrid()
