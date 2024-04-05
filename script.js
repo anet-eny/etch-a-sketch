@@ -34,7 +34,7 @@ function randomRgbColor() {
     return randomColor
 }
 
-document.querySelector(".btn").addEventListener("click", function(){
+document.querySelector(".grid-btn").addEventListener("click", function(){
     squaresPerRow = parseInt(prompt("Please enter a number between 1 and 100"))
     if(squaresPerRow < 1 || squaresPerRow > 100) {
         alert("Please enter a number between 1 and 100")
