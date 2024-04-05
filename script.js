@@ -7,22 +7,23 @@ let squaresPerRow = 24 // default value
 function createGrid() {
     for(let i = 0; i < squaresPerRow; i++) {
         for(let j = 0; j < squaresPerRow; j++) {
-            let square = document.createElement("div")
+            const square = document.createElement("div")
             square.classList.add("square-div")
             square.style.width = (parseInt(gridContainer.style.width) / squaresPerRow) + "px"
             square.style.height = (parseInt(gridContainer.style.width) / squaresPerRow) + "px"
             gridContainer.appendChild(square)    
         }
     }
-    document.querySelectorAll(".square-div").forEach(squareDiv => {
-        squareDiv.addEventListener("mouseenter", (event) => {
+    const squares = document.querySelectorAll(".square-div")
+    squares.forEach(square => {
+        square.addEventListener("mouseenter", (event) => {
             event.target.style.backgroundColor = randomRgbColor()
         })
     })
 }
 
 function randomInteger(max) {
-    return Math.floor(Math.random()*(max + 1))
+    return Math.floor(Math.random() * (max + 1))
 }
 
 
@@ -47,7 +48,7 @@ document.querySelector(".btn").addEventListener("click", function(){
 })
 
 function resetCanvas() {
-    let squares = gridContainer.querySelectorAll(".square-div")
+    const squares = gridContainer.querySelectorAll(".square-div")
     squares.forEach((square) => {
         square.style.backgroundColor = "grey"
     })
