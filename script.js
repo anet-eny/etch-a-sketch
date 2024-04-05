@@ -28,15 +28,13 @@ function randomInteger(max) {
 }
 
 
-function randomRgbColor () {
+function randomRgbColor() {
     let r = randomInteger(255)
     let g = randomInteger(255)
     let b = randomInteger(255)
     let randomColor = 'rgb(' + r + ',' + g + ',' + b + ')'
     return randomColor
 }
-
-
 
 
 createGrid()
@@ -51,9 +49,14 @@ document.querySelector(".btn").addEventListener("click", function(){
     createGrid()
 })
 
+function resetCanvas() {
+    let squares = gridContainer.querySelectorAll(".square-div")
+    squares.forEach((square) => {
+        square.style.backgroundColor = "grey"
+    })
+}
 
-// document.querySelectorAll(".square-div").forEach(squareDiv => {
-//     squareDiv.addEventListener("mouseenter", (event) => {
-//         event.target.style.backgroundColor = "black"
-//     })
-// })
+
+document.querySelector(".reset-btn").addEventListener("click", function(){
+    resetCanvas()
+})
