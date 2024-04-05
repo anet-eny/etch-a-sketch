@@ -4,8 +4,6 @@ gridContainer.style.height = "600px"
 
 let squaresPerRow = 24 // default value
 
-
-
 function createGrid() {
     for(let i = 0; i < squaresPerRow; i++) {
         for(let j = 0; j < squaresPerRow; j++) {
@@ -32,10 +30,9 @@ function randomRgbColor() {
     let r = randomInteger(255)
     let g = randomInteger(255)
     let b = randomInteger(255)
-    let randomColor = 'rgb(' + r + ',' + g + ',' + b + ')'
+    let randomColor = `rgb(${r}, ${g}, ${b})`
     return randomColor
 }
-
 
 createGrid()
 
@@ -55,7 +52,6 @@ function resetCanvas() {
         square.style.backgroundColor = "grey"
     })
 }
-
 
 document.querySelector(".reset-btn").addEventListener("click", function(){
     resetCanvas()
