@@ -5,6 +5,9 @@ body {
     align-items: center;
 }
 
+h1 {
+    font-family: Gluten;
+}
 
 .grid-btn:hover, .reset-btn:hover {
     background-color: #909294;
@@ -15,7 +18,6 @@ body {
     box-shadow: 0 5px #666;
     transform: translateY(4px);
 }
-
 
 .grid-btn, .reset-btn {
     border: 3px solid black;
