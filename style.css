@@ -27,11 +27,8 @@ body {
     transform: translateY(4px);
 }
 
-.color-buttons {
-    display: flex;
-}
 
-.color-btn {
+.reset-btn {
     border: 3px solid black;
     color: black;
     font-size: 14px;
